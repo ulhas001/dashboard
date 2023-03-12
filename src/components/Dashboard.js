@@ -106,7 +106,7 @@ const Dashboard = () => {
                     </div>
                     {/* add insta and bio */}
                     <div>
-                      <h6 className="mt-4">Profile </h6>
+                      <h6 className="mt-4">Date of Creation </h6>
                       <div class="form-floating mb-3">
                         <input
                           style={{ height: "60px" }}
@@ -117,6 +117,7 @@ const Dashboard = () => {
                         />
                         <label for="floatingInput">Date </label>
                       </div>
+                      <h6 className="mt-4">Enter Bio</h6>
                       <div class="form-floating mb-3">
                         <input
                           style={{ height: "100px" }}
