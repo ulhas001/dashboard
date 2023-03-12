@@ -9,12 +9,14 @@ const Dashboard = () => {
         <h1 className="text-center">D A S H B O A R D </h1>
         {/* modal */}
 
-        <motion.div className="d-flex align-items-center justify-content-center text-center mt-5 "
-        whileHover={{ scale: 1.4 }}
-        whileTap={{
-          scale: 0.8,
-        
-          borderRadius: "100%"}}
+        <motion.div
+          className="d-flex align-items-center justify-content-center text-center mt-5 "
+          whileHover={{ scale: 1.4 }}
+          whileTap={{
+            scale: 0.8,
+
+            borderRadius: "100%",
+          }}
         >
           <button
             type="button"
@@ -25,7 +27,6 @@ const Dashboard = () => {
             Upload Your Art!
           </button>
         </motion.div>
-        
 
         <div
           class="modal fade"
@@ -52,15 +53,29 @@ const Dashboard = () => {
                 {/* code for form  */}
                 <div className="row">
                   <div className="col-lg-12">
-                    <h6 className="">Upload Your Art Here !</h6>
+                    <h6 className="">Select Category!</h6>
+                    {/* category wise image */}
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Category</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
                     {/* #for input art images  */}
-                    <div className="input-group mb-5">
-                      <input
-                        type="file"
-                        class="form-control"
-                        id="inputGroupFile02"
-                      />
+                    <div>
+                      <h6 className="mt-4">Upload Image</h6>
+                      <div className="input-group ">
+                        <input
+                          type="file"
+                          class="form-control"
+                          id="inputGroupFile02"
+                        />
+                      </div>
                     </div>
+
                     {/* description  */}
                     <div>
                       <h6 className="mt-4">Enter a Description </h6>
@@ -95,12 +110,12 @@ const Dashboard = () => {
                       <div class="form-floating mb-3">
                         <input
                           style={{ height: "60px" }}
-                          type="text"
+                          type="date"
                           class="form-control"
                           id="floatingInput"
                           placeholder="Description"
                         />
-                        <label for="floatingInput">Insta ID </label>
+                        <label for="floatingInput">Date </label>
                       </div>
                       <div class="form-floating mb-3">
                         <input
@@ -124,7 +139,11 @@ const Dashboard = () => {
                 >
                   Close
                 </button>
-                <button data-bs-dismiss="modal" type="button" class="btn btn-primary">
+                <button
+                  data-bs-dismiss="modal"
+                  type="button"
+                  class="btn btn-primary"
+                >
                   Save changes
                 </button>
               </div>
@@ -202,11 +221,10 @@ const Dashboard = () => {
             </motion.div>
           </div>
         </div>
-        
+
         <div className="mt-5 col-lg-12">
           {/* catergories for views */}
-          <div class="dropdown " 
-          >
+          <div class="dropdown ">
             <button
               class="btn btn-secondary dropdown-toggle"
               type="button"
@@ -244,7 +262,10 @@ const Dashboard = () => {
             />
           </div>
           {/* sort for image0s */}
-          <div className="col-lg-8 d-flex  shadow-lg p-5  mb-5 bg-body rounded" style={{backgroundColor:"whitesmoke"}}>
+          <div
+            className="col-lg-8 d-flex  shadow-lg p-5  mb-5 bg-body rounded"
+            style={{ backgroundColor: "whitesmoke" }}
+          >
             <div className="col-lg-4 d-flex align-items-center justify-content-around">
               <div class="card" style={{ width: "12rem" }}>
                 <img src={img} class="card-img-top" alt="..." />
